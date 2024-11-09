@@ -1,5 +1,5 @@
- // Initialize cart from localStorage
- function getCart() {
+// Initialize cart from localStorage
+function getCart() {
     const cart = localStorage.getItem('cart');
     return cart ? JSON.parse(cart) : { items: [], couponDiscount: 0 };
 }
@@ -7,6 +7,17 @@
 // Save cart to localStorage
 function saveCart(cart) {
     localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+// Add item to cart (update this function as needed when adding items)
+function addItemToCart(item) {
+    const cart = getCart();
+
+    // Set absolute path for images
+    item.image = item.image.startsWith('/') ? `${window.location.origin}${item.image}` : item.image;
+
+    cart.items.push(item);
+    saveCart(cart);
 }
 
 // Render cart items

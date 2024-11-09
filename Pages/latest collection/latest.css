@@ -6,3 +6,8 @@
     color: white;
     border: none;
   }
+
+.cart:hover{
+    cursor: pointer;
+    scale: 1.1;
+}
