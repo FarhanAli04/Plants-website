@@ -139,7 +139,7 @@ body {
 
 .hero {
     height: 400px;
-    background: url('./images/Rectangle\ 11.png') no-repeat center center/cover;
+    background: url('./collections/images/Rectangle\ 11.png') no-repeat center center/cover;
     display: flex;
     justify-content: left;
     align-items: center;
